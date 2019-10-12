@@ -28,13 +28,21 @@ h1 {
 
 h2 {
   font-size: 2.174rem;
-  padding-bottom: 2rem;
+  /* padding-bottom: 2rem;  fix portfolio title padding */
   text-transform: uppercase;
 }
 
 h3 {
   font-size: 1.4rem;
 
+}
+
+a {
+  font-size: 1.1rem;
+}
+
+small {
+  font-size: 1rem;
 }
 
 p {
@@ -45,9 +53,6 @@ img {
   width: 100%;
 }
 
-a {
-  font-size: 1.1rem;
-}
 
 
 /* Main Sections */
@@ -60,16 +65,22 @@ a {
   padding-bottom: 1em;
 }
 
+.banner {
+  margin-top: 2em;
+}
+
 .dp {
   width: 40%;
   border-radius: 50%;
   margin-bottom: 0.5em;
+  filter: grayscale(100%);
 }
 
 .about-me {
   font-size: 1.25rem;
   line-height: 1.5;
 }
+
 
 .contact {
   text-align: center;
@@ -102,6 +113,19 @@ a {
 }
 
 
+/* Skills */
+
+.skills {
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.icons {
+  padding-top: 1em;
+  max-width: 40%;
+  margin: auto;
+}
+
 /* Links */
 
 a:link {
@@ -133,10 +157,6 @@ a:hover {
   border-radius: 10px;
 }
 
-.main-nav {
-  padding-bottom: 2em;
-}
-
 /* Table */
 
 .main-table {
@@ -165,6 +185,12 @@ a:hover {
 /* Media Queries */
 
 @media (min-width: 759px) {
+
+  .wrapper {
+    width: 80%;
+    max-width: 1150px;
+    margin: auto;
+  }
 
 /* Header */
 
@@ -203,6 +229,31 @@ a:hover {
   font-size: 1.25rem;
 }
 
+
+/* Skills */
+
+.python {
+  float: left;
+}
+
+.react {
+  float: right;
+}
+
+.nodejs {
+  float: center;
+}
+
+.python,
+.react,
+.nodejs {
+  display: inline-block;
+}
+
+.icons {
+  max-width: 70%;
+}
+
 /* Table */
 .col {
   width: 50%;
@@ -230,12 +281,6 @@ a:hover {
 }
 
 @media (min-width: 1024px) {
-
-.wrapper {
-  width: 80%;
-  max-width: 1150px;
-  margin: auto;
-}
 
 .main-footer {
   width: 80%;
