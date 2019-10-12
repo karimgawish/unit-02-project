@@ -21,7 +21,7 @@ html {
   font-size: 16px;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3 {
   font-family: 'Changa', monospace, sans-serif;
   font-weight: 600;
   margin: 0;
@@ -34,6 +34,7 @@ h1 {
 
 h2 {
   font-size: 2.174rem;
+  padding: 0.5em 0;
   text-transform: uppercase;
 }
 
@@ -41,9 +42,19 @@ h3 {
   font-size: 1.4rem;
 }
 
+h4 {
+  font-size: 1.4rem;
+  font-family: 'Cairo', monospace, sans-serif;
+  font-weight: 400;
+  color: #828282;
+  line-height: 1.5;
+  margin: 0 0 1em;
+}
+
 a,
 p {
   font-size: 1.1rem;
+  margin: 0;
 }
 
 
@@ -74,9 +85,10 @@ img {
 .dp {
   width: 50%;
   border-radius: 50%;
-  margin-bottom: 0.5em;
+  margin-bottom: 2em;
   filter: grayscale(100%);
 }
+
 
 
 /* Navigation */
@@ -95,19 +107,16 @@ img {
 .main-table {
   background-color: white;
   text-align: center;
-  padding: 3em 1em 0;
+  padding: 1em 1em 0;
 }
 
-.main-table h2 {
-  padding-bottom: 1em;
-}
 
 .main-table h3 {
-  padding-top: 0.5em;
+  padding: 0.5em 0;
 }
 
 .item {
-  padding-bottom: 2em;
+  padding-bottom: 2.5em;
 
 }
 
@@ -120,9 +129,8 @@ img {
 }
 
 .icons {
-  padding-top: 1em;
   max-width: 35%;
-  margin: auto;
+  margin: 3em auto 0;
 }
 
 
@@ -134,12 +142,12 @@ img {
   width: 90%;
   margin: auto;
   border-top: solid lightgray 1px;
-
 }
 
 .contact-info {
   font-weight: bold;
   padding-left: 1em;
+  line-height: 2;
 }
 
 .main-footer {
@@ -246,12 +254,8 @@ a:hover {
   width: 60%;
   display: inline-block;
   text-align: left;
+  padding-top: 0;
 }
-
-.about-me p {
-  font-size: 1.25rem;
-}
-
 
 
 /* Table */
@@ -307,7 +311,7 @@ a:hover {
 .up-arrow {
   display: block;
   width: 3em;
-  margin: 0 1em 1em 0;
+  margin: 0 1.5em 1.5em 0;
   position: fixed;
   bottom: 0;
   right: 0;
