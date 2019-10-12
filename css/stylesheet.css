@@ -1,4 +1,9 @@
-/* Universal Styles */
+
+/* =================================
+  Base Elements Styles
+==================================== */
+
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -6,7 +11,7 @@
 
 body {
   background-color: #F6F6F6;
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Cairo', monospace, sans-serif;
   font-weight: 400;
   color: #393939;
   line-height: 1.5;
@@ -17,7 +22,7 @@ html {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Changa', sans-serif;
+  font-family: 'Changa', monospace, sans-serif;
   font-weight: 600;
   margin: 0;
 }
@@ -34,28 +39,25 @@ h2 {
 
 h3 {
   font-size: 1.4rem;
-
 }
 
-a {
-  font-size: 1.1rem;
-}
-
-small {
-  font-size: 1rem;
-}
-
+a,
 p {
   font-size: 1.1rem;
 }
+
 
 img {
   width: 100%;
 }
 
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* Header */
 
 
-/* Main Sections */
 .main-header {
   padding: 2rem 1rem;
   text-align: center;
@@ -70,21 +72,69 @@ img {
 }
 
 .dp {
-  width: 40%;
+  width: 50%;
   border-radius: 50%;
   margin-bottom: 0.5em;
   filter: grayscale(100%);
 }
 
-.about-me {
-  font-size: 1.25rem;
-  line-height: 1.5;
+
+/* Navigation */
+
+.main-nav a {
+  display: block;
+  padding: 0.5em 0;
+  margin-bottom: 0.5em;
+  background-color: white;
+  border-radius: 15px;
 }
 
 
+/* Table */
+
+.main-table {
+  background-color: white;
+  text-align: center;
+  padding: 3em 1em 0;
+}
+
+.main-table h2 {
+  padding-bottom: 1em;
+}
+
+.main-table h3 {
+  padding-top: 0.5em;
+}
+
+.item {
+  padding-bottom: 2em;
+
+}
+
+
+/* Skills */
+
+.skills {
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.icons {
+  padding-top: 1em;
+  max-width: 35%;
+  margin: auto;
+}
+
+
+/* Footer */
+
 .contact {
   text-align: center;
-  padding: 3em 1em;
+  padding: 2em 0;
+  width: 90%;
+  margin: auto;
+  border-top: solid lightgray 1px;
+
 }
 
 .contact-info {
@@ -94,7 +144,7 @@ img {
 
 .main-footer {
   padding: 2em 0;
-  border-top: solid lightgrey 1px;
+  border-top: solid lightgray 1px;
   width: 90%;
   margin: auto;
 }
@@ -116,18 +166,6 @@ img {
   display: none;
 }
 
-/* Skills */
-
-.skills {
-  text-align: center;
-  padding: 2em 1em;
-}
-
-.icons {
-  padding-top: 1em;
-  max-width: 40%;
-  margin: auto;
-}
 
 /* Links */
 
@@ -151,45 +189,21 @@ a:hover {
 }
 
 
-/* Navigation */
-.main-nav a {
-  display: block;
-  padding: 0.5em;
-  margin-bottom: 0.5em;
-  background-color: white;
-  border-radius: 10px;
-}
+/* =================================
+  Clearfix
+==================================== */
 
-/* Table */
-
-.main-table {
-  background-color: white;
-  text-align: center;
-  padding: 3em 1em 0;
-}
-
-.main-table h2 {
-  padding-bottom: 1em;
-}
-
-.main-table h3 {
-  padding-top: 1em;
-}
-
-.item {
-  padding-bottom: 2em;
-
-}
-
-
-/* Clearfix */
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Media Queries */
+
+/* =================================
+  Media Queries
+==================================== */
+
 
 @media (min-width: 759px) {
 
@@ -197,6 +211,11 @@ a:hover {
     width: 80%;
     max-width: 1150px;
     margin: auto;
+  }
+
+  .contact,
+  .main-footer {
+    width: 100%;
   }
 
 /* Header */
@@ -209,7 +228,7 @@ a:hover {
 .main-nav li{
   display: inline-block;
   margin: 0;
-  padding-right: 1.2em;
+  padding: 0 1.5em;
 }
 
 .main-nav a {
@@ -231,6 +250,15 @@ a:hover {
 
 .about-me p {
   font-size: 1.25rem;
+}
+
+
+
+/* Table */
+.col {
+  width: 50%;
+  float: left;
+  padding: 0 0.5em 2em;
 }
 
 
@@ -256,13 +284,7 @@ a:hover {
 
 .icons {
   max-width: 70%;
-}
-
-/* Table */
-.col {
-  width: 50%;
-  float: left;
-  padding: 0 0.5em 2em;
+  padding-top: 0;
 }
 
 
@@ -289,15 +311,20 @@ a:hover {
   position: fixed;
   bottom: 0;
   right: 0;
+  transition: all 0.5s;
+  filter: grayscale(90%);
+}
+
+.up-arrow:hover {
+  transform: scale(1.03);
+  filter: grayscale(0);
 }
 
 }
 
 @media (min-width: 1024px) {
 
-.main-footer {
-  width: 80%;
-}
+/* Table */
 
 .col {
   width: 33.3%;
