@@ -10,11 +10,13 @@
 }
 
 body {
-  background-color: #F6F6F6;
   font-family: 'Cairo', monospace, sans-serif;
   font-weight: 400;
   color: #393939;
   line-height: 1.5;
+  background-color: rgb(240, 240, 240);
+  background-image: url("../img/dot-grid.png");
+  background-blend-mode: multiply;
 }
 
 html {
