@@ -107,6 +107,11 @@ img {
   border-radius: 15px;
 }
 
+.main-nav a:hover {
+  background-color: #6DC2CB;
+  color: white;
+}
+
 
 /* Table */
 
@@ -250,6 +255,10 @@ a:hover {
   background: none;
 }
 
+.main-nav a:hover {
+  background-color: transparent;
+  color: #6DC2CB;
+}
 
 .dp {
   width: 30%;
